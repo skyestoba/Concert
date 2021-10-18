@@ -15,7 +15,7 @@ public class Performer {
     public Performer(String name, String description) {
         this.name = name;
         this.description = description;
-        hits = new ArrayList<String>();
+        hits = new ArrayList<>();
     }
 
     public String getName() {
@@ -34,10 +34,19 @@ public class Performer {
         this.description = description;
     }
 
+    /**
+     * Adds a string, which is the name of a hit song, to the list of hits.
+     * @param hit String The name of the hit.
+     */
     public void addHit(String hit) {
         hits.add(hit);
     }
 
+    /**
+     * Returns a String representing the object.
+     * If the list of hits is not empty, it adds the names of the hits.
+     * @return String
+     */
     @Override
     public String toString() {
         String result = name + ": " + description + ". ";
